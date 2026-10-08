@@ -4,10 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * @author Vincent
- * @version 1.0
+ * 应用上下文冒烟测试。
  */
-@SpringBootTest
+@SpringBootTest(properties = "ingestion.store.journal-path=target/smoke-journal.jsonl")
 public class ApplicationTests {
     @Test
     public void contentLoad() {
